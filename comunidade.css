@@ -11,15 +11,19 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    margin-top: 60px;
 }
 
 .navbar {
-    width: 100%;
-    padding: 10px 20px;
-    justify-content: space-between;
-    align-items: center;
-    display: flex;
-    position: relative;
+  width: 100%;
+  padding: 10px 20px;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  position: fixed; /* Trocar de relative para fixed */
+  top: 0; /* Fixar no topo */
+  left: 0;
+  background-color: #103349; /* Certifique-se de definir uma cor de fundo para evitar transparência */
 }
 
 .texto-nav {

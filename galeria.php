@@ -6,7 +6,13 @@ $imagens = [
     ['url' => 'img/moldura-prata.png', 'pontos' => 100],
     ['url' => 'img/coala.png', 'pontos' => 15],
     ['url' => 'img/moldura.png', 'pontos' => 10],
-    ['url' => 'img/pascoa.png', 'pontos' => 30],
+    ['url' => 'img/tigre.png', 'pontos' => 30],
+    ['url' => 'img/hipopotamo.png', 'pontos' => 40],
+    ['url' => 'img/dogo-argentino.png', 'pontos' => 60],
+    ['url' => 'img/moldura-ouro.png', 'pontos' => 200],
+    ['url' => 'img/urso.png', 'pontos' => 120],
+    ['url' => 'img/gato-preto.png', 'pontos' => 25],
+    ['url' => 'img/elefante.png', 'pontos' => 35],
 ];
 ?>
 

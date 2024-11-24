@@ -56,9 +56,10 @@ body {
     margin: 0 5vw;
     margin-top: 35px;
     border-radius: 20px;
-    padding: 10px;
-   
-    
+    padding: 5px;
+    margin-left: 9vh;
+    margin-right: 9vh;
+    margin-top: 8vh;
 }
 
 .mapa {

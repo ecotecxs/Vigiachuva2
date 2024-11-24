@@ -22,11 +22,27 @@
                 <label for="">Data de Nascimento</label>
                 <input type="date" class="inputs" name="data" required>
                 <label for="">Senha</label>
-                <input type="password" class="inputs" name="senha" placeholder="Digite sua senha" required>
+                <div class="senha">
+                    <input type="password" id="password" class="inputs" name="senha" placeholder="Digite sua senha" required>
+                    <img id="toggleIcon" src="img/ocultar.png" alt="Mostrar senha" onclick="togglePassword()">
+                </div>
 
                 <button type="submit">Cadastrar</button>
                 <p>Já tem uma conta? <a href="login.html">Logar</a></p>
             </form> 
+            <script>
+                function togglePassword() {
+                   const passwordField = document.getElementById('password');
+                   const showPassword = document.getElementById('showPassword');
+                   
+                   
+                   if (passwordField.type === 'password') {
+                       passwordField.type = 'text'; 
+                   } else {
+                       passwordField.type = 'password'; 
+                   }
+               } 
+             </script>
         </div>
     </div>
 </body>

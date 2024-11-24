@@ -40,6 +40,21 @@
    
  }
 
+ .senha {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-bottom: 15px;
+}
+
+ .senha img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-bottom: 10px;
+ }
+
  .inputs{
     width: 100%;
     padding: 10px;

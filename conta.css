@@ -48,12 +48,20 @@ body {
 .nav-right img {
     width: 25px;
 }
+
+.dados {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
 #infoconta{
     border-radius: 15px;
     height: 350px;
     width: 400px;
     display: flex;
-    margin: 25px;
+    margin: 40px;
     background-color: #1b4963;
     justify-content: center;
     flex-direction: column;
@@ -62,7 +70,7 @@ body {
 #center{
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 .titulos{
     font-size: 18px;
@@ -77,7 +85,8 @@ height: 30px;
 display: flex;
 justify-content: center;
 align-items: center;
-margin: 10px;
+margin-top: 10px;
+margin-left:15px;
 border-radius: 10px;
 background-color: #7BB8C8;
 }

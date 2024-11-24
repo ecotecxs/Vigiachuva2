@@ -115,12 +115,10 @@ $conexao->close();
         <a href="comunidade.php"> <img src="img/conversacao.png" alt="Ícone 4"></a>
     </nav>
 
+    <h1 class="dados">DADOS PESSOAIS</h1>
 
     <div id="center">
         <div id="infoconta">
-            <div id="ti">
-                <h1 id="titulo">DADOS PESSOAIS</h1>
-            </div>
             <div class="user-info">
                 <div class="titulos"><label>EMAIL</label></div>
                 <div class="borda"><span><?php echo htmlspecialchars($email); ?></span></div>
