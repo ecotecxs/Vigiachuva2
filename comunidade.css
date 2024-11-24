@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #103349;
+    color: #FFFFFF;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    width: 100%;
+    padding: 10px 20px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    position: relative;
+}
+
+.texto-nav {
+    cursor: pointer;
+}
+.nav-left {
+    position: relative;
+    display: flex;  
+}
+
+.nav-left h1 {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.nav-left img {
+    width: 30px; 
+    
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.nav-right img {
+    width: 25px;
+}
+
+.menu-inferior {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+    background-color: #103349;
+  }
+  .menu-inferior img {
+    width: 40px;
+  }
+  .menu-inferior a {
+    
+    text-decoration: none;
+  }
+  #titulo{
+    display: flex;
+    justify-content: center;
+  }
+  .comentarios {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    background-color: #1b4963;
+    padding-bottom: 20px; /* Espaço extra para o menu inferior */
+    border-radius: 10px;
+    margin-bottom: 120px; 
+    overflow-y: auto;
+}
+  #caixa{
+    display: flex;
+    justify-content: space-around;
+    
+  }
+  #espaço{
+    display: flex;
+    margin-top: 10px;
+   
+  }
+ 
+  /* Cria espaço real entre comentários e menu inferior */
+#container {
+  flex-grow: 1; /* Ajusta o conteúdo principal para ocupar o espaço disponível */
+  margin-bottom: 80px; /* Espaço claro entre os comentários e o menu inferior */
+}
+
+#titulo {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinalizar Alagamento</title>
+    <link rel="stylesheet" href="sinalizacao.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main class="container">
+        <h2>SINALIZAR ALAGAMENTO</h2>
+        <form class="formulario" action="insert.php" method="POST">
+            <div class="campo">
+                <h2 id="endereco">PONTO DE REFERÊNCIA</h2>
+                <input type="text" id="endereco" name="endereco" placeholder="Digite o ponto de referência">
+            </div>
+            <div class="campo">
+                <h2>GRAU DO ALAGAMENTO</h2>
+                <div class="opcoes">
+                    <label class="leve"><input type="radio" name="grau" value="leve" required> Leve</label>
+                    <label class="medio"><input type="radio" name="grau" value="medio"> Moderado</label>
+                    <label class="grave"><input type="radio" name="grau" value="grave"> Grave</label>
+                </div>
+            </div>
+            <div class="campo">
+                <h2 id="comentario">ADICIONAR COMENTÁRIO</h2>
+                <textarea id="comentario" name="comentario" placeholder="Digite seu comentário aqui"></textarea>
+            </div>
+
+            <!-- Campos ocultos para latitude e longitude -->
+            <input type="hidden" id="latitude" name="latitude">
+            <input type="hidden" id="longitude" name="longitude">
+
+          <button type="submit" class="botao-enviar">ENVIAR</button>
+        </form>
+    </main>
+
+
+    <script>
+   document.addEventListener("DOMContentLoaded", function() {
+    // Função para capturar parâmetros da URL
+    function getQueryParams() {
+        const params = new URLSearchParams(window.location.search);
+        return {
+            lat: params.get('lat'),
+            lon: params.get('lon')
+        };
+    }
+
+    // Preenche os campos ocultos de latitude e longitude
+    const { lat, lon } = getQueryParams();
+    
+    if (lat && lon) {
+        document.getElementById('latitude').value = lat;
+        document.getElementById('longitude').value = lon;
+    } else {
+        alert('Erro: Latitude e longitude não foram fornecidas.');
+    }
+});
+
+
+    </script>
+</body>
+</html>

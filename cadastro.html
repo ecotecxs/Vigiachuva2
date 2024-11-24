@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="cadastro.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ponnala&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="logo"><img src="" alt=""></div>
+        <h1>CADASTRO</h1>
+        <div class="login">
+            <form id="formulario" action="cadastro.php" method="post">
+                <label for="">Nome de Usuário</label>
+                <input type="text" class="inputs" name="nome" placeholder="Digite o nome de usuário" required>
+                <label for="">Email</label>
+                <input type="email" class="inputs" name="email" placeholder="Digite seu email" required>
+                <label for="">Data de Nascimento</label>
+                <input type="date" class="inputs" name="data" required>
+                <label for="">Senha</label>
+                <input type="password" class="inputs" name="senha" placeholder="Digite sua senha" required>
+
+                <button type="submit">Cadastrar</button>
+                <p>Já tem uma conta? <a href="login.html">Logar</a></p>
+            </form> 
+        </div>
+    </div>
+</body>
+</html>
