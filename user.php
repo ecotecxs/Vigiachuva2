@@ -83,7 +83,7 @@ $stmt_comentarios->close();
                 <h1>Vigia Chuva</h1>
             </div>
             <div class="nav-right">
-                <a href="notificacao.html"><img src="img/packard-bell.png" alt="Ícone 1"></a>
+                <a href="notificacao.php"><img src="img/packard-bell.png" alt="Ícone 1"></a>
                 <div class="dropdown">
                     <h1 class="texto-nav"><img src="img/tres-pontos.png" alt="menu"></h1>
                     <ul class="dropdown-content">

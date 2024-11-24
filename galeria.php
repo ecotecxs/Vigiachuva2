@@ -1,24 +1,13 @@
 <?php
-session_start();
-
-// Verifica se o usuário está logado
-if (!isset($_SESSION['user_id'])) {
-    header('Location: login.html');
-    exit;
-}
-
-$userId = $_SESSION['user_id'];
-
-// Array com os caminhos das imagens disponíveis no servidor
+// Exemplo de como as imagens podem ser configuradas com pontos
 $imagens = [
-    'img/cachorro.png',
-    'img/guaxinim.png',
-    'img/moldura-prata.png',
-    'img/coala.png',
-    'img/moldura.png',
-    'img/pascoa.png'
+    ['url' => 'img/cachorro.png', 'pontos' => 50],
+    ['url' => 'img/guaxinim.png', 'pontos' => 70],
+    ['url' => 'img/moldura-prata.png', 'pontos' => 100],
+    ['url' => 'img/coala.png', 'pontos' => 15],
+    ['url' => 'img/moldura.png', 'pontos' => 10],
+    ['url' => 'img/pascoa.png', 'pontos' => 30],
 ];
-
 ?>
 
 <!DOCTYPE html>
@@ -27,9 +16,6 @@ $imagens = [
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="galeria.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Galeria</title>
 </head>
 <body>
@@ -40,7 +26,7 @@ $imagens = [
         </div>
 
         <div class="nav-right">
-            <a href="notificacao.html"><img src="img/packard-bell.png" alt="Ícone 1"></a>
+            <a href="notificacao.php"><img src="img/packard-bell.png" alt="Ícone 1"></a>
            
         </div>
     </nav>
@@ -49,11 +35,11 @@ $imagens = [
     <div class="galeria">
         <?php foreach ($imagens as $imagem): ?>
             <div class="galeria-item">
-                <img src="<?php echo $imagem; ?>" alt="Imagem">
-                <!-- Formulário para selecionar a imagem como foto de perfil -->
+                <img src="<?php echo $imagem['url']; ?>" alt="Imagem">
                 <form method="POST" action="atualizar_foto.php">
-                    <input type="hidden" name="foto_perfil" value="<?php echo $imagem; ?>">
-                    <button type="submit">Selecionar</button>
+                    <input type="hidden" name="foto_perfil" value="<?php echo $imagem['url']; ?>">
+                    <input type="hidden" name="pontos_necessarios" value="<?php echo $imagem['pontos']; ?>">
+                    <button type="submit">Trocar por <?php echo $imagem['pontos']; ?> pontos</button>
                 </form>
             </div>
         <?php endforeach; ?>

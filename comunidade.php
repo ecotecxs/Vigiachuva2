@@ -26,7 +26,7 @@ $result = $conexao->query($query);
             <h1>Vigia Chuva</h1>
         </div>
         <div class="nav-right">
-            <a href="notificacao.html"><img src="img/packard-bell.png" alt="Ícone 1"></a>
+            <a href="notificacao.php"><img src="img/packard-bell.png" alt="Ícone 1"></a>
         </div>
     </nav>
     
