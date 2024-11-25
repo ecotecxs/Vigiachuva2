@@ -15,6 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Se for uma requisição POST, insere a nova sinalização no banco
 
     // Pegando dados do formulário de sinalização
+    $bairro = $_POST['bairro'];
     $endereco = $_POST['endereco'];
     $grau = $_POST['grau'];
     $latitude = $_POST['latitude'];
@@ -30,14 +31,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Inserindo a sinalização no banco de dados
-    $sql_sinalizacao = "INSERT INTO tb_sinalizacao (nome, ponto_referencia, grau_alagamento, data_hora, ativo, latitude, longitude) VALUES (?, ?, ?, ?, 'SIM', ?, ?)";
+    $sql_sinalizacao = "INSERT INTO tb_sinalizacao (nome, ponto_referencia, grau_alagamento, data_hora, ativo, latitude, longitude, bairro) VALUES (?, ?, ?, ?, 'SIM', ?, ?, ?)";
     $stmt_sinalizacao = $conexao->prepare($sql_sinalizacao);
 
     if (!$stmt_sinalizacao) {
         die("Erro na preparação da consulta: " . $conexao->error);
     }
 
-    $stmt_sinalizacao->bind_param("ssssdd", $nome_usuario, $endereco, $grau, $data_hora, $latitude, $longitude);
+    $stmt_sinalizacao->bind_param("ssssdds", $nome_usuario, $endereco, $grau, $data_hora, $latitude, $longitude, $bairro);
 
     if ($stmt_sinalizacao->execute()) {
         // Recupera o ID da sinalização inserida

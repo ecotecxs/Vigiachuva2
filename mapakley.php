@@ -35,7 +35,7 @@ if (!isset($_SESSION['nome_usuario'])) {
 }
 ?>
 
-<div id="map" style="width: 900px; height: 500px;"></div>
+<div id="map" style="width: 900px; height: 570px;"></div>
 
 <script>
     const map = L.map('map').setView([-24.10508, -46.650696], 16);
