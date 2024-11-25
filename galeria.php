@@ -1,4 +1,11 @@
 <?php
+session_start();
+
+if (!isset($_SESSION['nome_usuario'])) {
+    // Redireciona para a página de login se o usuário não estiver logado
+    header('Location: login.html');
+    exit();
+}
 // Exemplo de como as imagens podem ser configuradas com pontos
 $imagens = [
     ['url' => 'img/cachorro.png', 'pontos' => 50],
