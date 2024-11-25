@@ -120,18 +120,18 @@ $conexao->close();
     <div id="center">
         <div id="infoconta">
             <div class="user-info">
-                <div class="titulos"><label>EMAIL</label></div>
+                <div class="titulos"><label>Email</label></div>
                 <div class="borda"><span><?php echo htmlspecialchars($email); ?></span></div>
             </div>
             <div class="user-info">
-                <div class="titulos"><label>NOME DO USUARIO</label></div>
+                <div class="titulos"><label>Nome do Usuário</label></div>
                 <div class="borda">
                     <span><?php echo htmlspecialchars($nm_user); ?></span>
                     <i class="fas fa-pencil-alt edit-icon" id="edit-username"></i>
                 </div>
             </div>
             <div class="user-info">
-                <div class="titulos"><label>SENHA</label></div>
+                <div class="titulos"><label>Senha</label></div>
                 <div class="borda"><span>*****</span> </div><!-- Exibindo apenas asteriscos por segurança -->
             </div>
         </div>
