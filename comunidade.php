@@ -1,5 +1,11 @@
 <?php
 session_start();
+
+if (!isset($_SESSION['nome_usuario'])) {
+    // Redireciona para a página de login se o usuário não estiver logado
+    header('Location: login.html');
+    exit();
+}
 include_once("conexao.php");
 
 $query = "SELECT nome_usuario, comentario, ponto_referencia, grau_alagamento, data_hora FROM tb_comentarios ORDER BY data_hora DESC";
