@@ -1,11 +1,6 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['nome_usuario'])) {
-    header('Location: login.html');
-    exit();
-}
-
 include_once("conexao.php"); // incluindo a conexao com banco de dados
 ?>
 
